@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://d28w5bql3g21l" path="res://Assets/Models/gobot/model/gobot_gobot_normal.png" id="4_nn08x"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kyqiw"]
-height = 1.5408783
+radius = 0.51708984
+height = 1.5285301
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyuk8"]
 resource_name = "GobotMat"
@@ -2033,7 +2034,7 @@ _data = {
 script = ExtResource("1_rpqav")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.0432897, 0, 0, 0, 1, 0, 0, 0, 0.9806282, 0, 0.7216283, 0)
+transform = Transform3D(1.0432897, 0, 0, 0, 1, 0, 0, 0, 0.8929583, 0, 0.66292965, -0.048246026)
 shape = SubResource("CapsuleShape3D_kyqiw")
 
 [node name="CameraArm" type="Node3D" parent="."]

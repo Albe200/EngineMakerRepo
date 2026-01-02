@@ -281,7 +281,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="BluePlatform" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 7.904308, 1, -0.01)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 7.904, 2, -0.01)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -291,7 +291,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="RedPlatform2" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, 7.682, 2, 7.571273)
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, 7.682, 4, 7.571)
 mesh = SubResource("ArrayMesh_5xha7")
 skeleton = NodePath("")
 
@@ -301,7 +301,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="BluePlatform2" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.945886, 3, 7.274)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.946, 6, 7.274)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -311,7 +311,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="Coin" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.7630887, 2.0650737, 0.14704019)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.763, 5, 8.735)
 
 [node name="Counter" type="Control" parent="."]
 layout_mode = 3
@@ -340,16 +340,16 @@ label_settings = SubResource("LabelSettings_equcc")
 script = ExtResource("4_2lfkc")
 
 [node name="Coin2" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.004935, 2.0457816, -1.5363381)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.005, 3, -1.536)
 
 [node name="Coin3" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.5984595, 0.6, 2.5125742)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.784, 7, 7.435)
 
 [node name="Coin4" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.0556648, 0.6, -0.74834406)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.056, 1, -0.748)
 
 [node name="BluePlatform3" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.946, 4, 14.669774)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.946, 8, 14.67)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -359,7 +359,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="RedPlatform3" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, 14.891, 4, -0.137)
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, 14.891, 8, -0.137)
 mesh = SubResource("ArrayMesh_5xha7")
 skeleton = NodePath("")
 
@@ -367,3 +367,16 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RedPlatform3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_equcc")
+
+[node name="RedPlatform4" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, 7.682, 10, 7.571)
+mesh = SubResource("ArrayMesh_5xha7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedPlatform4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedPlatform4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_equcc")
+
+[node name="Coin5" parent="." instance=ExtResource("3_equcc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.425, 11, 6.411)

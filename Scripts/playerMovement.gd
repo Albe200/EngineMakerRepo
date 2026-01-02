@@ -2,7 +2,8 @@ extends CharacterBody3D
 
 
 const SPEED = 7.0    #By default: 5.0
-const JUMP_VELOCITY = 7.0   #By default: 4.5
+const JUMP_VELOCITY = 8.5   #By default: 4.5
+var jumped_once = false
 var respawnPosition = Vector3(0, 3, 0)
 @export var mouse_sensitivity_horizontal = 0.2
 @export var mouse_sensitivity_vertical = 0.2
@@ -32,6 +33,16 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():    #For jump (see Input map on Project Settings)
 		velocity.y = JUMP_VELOCITY
 		animation.play("Jump", 0.5)
+	
+	# Handle double jump.
+	if Input.is_action_just_pressed("jump") and not is_on_floor() and not jumped_once:
+		velocity.y = JUMP_VELOCITY
+		animation.play("Flip", 0.3)
+		jumped_once = true
+	
+	# Resets double jump.
+	if is_on_floor() and jumped_once:
+		jumped_once = false
 
 	# Get the input direction and handle the movement/deceleration
 	# As good practice, you should replace UI actions with custom gameplay actions
