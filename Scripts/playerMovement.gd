@@ -2,9 +2,9 @@ extends CharacterBody3D
 
 
 const SPEED = 6.5    #By default: 5.0
-const JUMP_VELOCITY = 8.5   #By default: 4.5
+const JUMP_VELOCITY = 8   #By default: 4.5
 var jumped_once = false
-var respawnPosition = Vector3(0, 3, 0)
+var respawnPosition = Vector3(0, 2, 0)
 @export var mouse_sensitivity_horizontal = 0.2
 @export var mouse_sensitivity_vertical = 0.2
 @onready var animation =  $gobot/AnimationPlayer    #Getting the reference of the animation node
@@ -63,6 +63,7 @@ func _physics_process(delta: float) -> void:
 
 func respawn_player():
 	position = respawnPosition    #resets the player's position (to its original one from the main scene)
+	velocity.y = 0
 
 func _input(event):
 	if event is InputEventMouseMotion:    #Checks if the mouse is moving
