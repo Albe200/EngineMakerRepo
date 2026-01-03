@@ -1,13 +1,15 @@
 extends CharacterBody3D
 
 
-const SPEED = 7.0    #By default: 5.0
+const SPEED = 6.5    #By default: 5.0
 const JUMP_VELOCITY = 8.5   #By default: 4.5
 var jumped_once = false
 var respawnPosition = Vector3(0, 3, 0)
 @export var mouse_sensitivity_horizontal = 0.2
 @export var mouse_sensitivity_vertical = 0.2
 @onready var animation =  $gobot/AnimationPlayer    #Getting the reference of the animation node
+@onready var jumpAudio = $JumpAudio
+@onready var walkingAudio = $WalkingAudio
 
 func _ready() -> void:
 	
@@ -33,11 +35,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():    #For jump (see Input map on Project Settings)
 		velocity.y = JUMP_VELOCITY
 		animation.play("Jump", 0.5)
+		jumpAudio.play()
 	
 	# Handle double jump.
 	if Input.is_action_just_pressed("jump") and not is_on_floor() and not jumped_once:
 		velocity.y = JUMP_VELOCITY
 		animation.play("Flip", 0.3)
+		jumpAudio.play()
 		jumped_once = true
 	
 	# Resets double jump.
@@ -76,10 +80,15 @@ func animate_player():
 	if is_on_floor():
 		if is_moving():
 			animation.play("Run", 0.5)
+			walkingAudio.stream_paused = false
 		else:
 			animation.play("Idle", 0.5)
+			walkingAudio.stream_paused = true
 	elif velocity.y < 0:
 		animation.play("Fall", 0.1)
+	else:
+		walkingAudio.stream_paused = true    #This needs to be rewrited to avoid hear the walkign audio while player have jumped.
+	#The property stream_paused is used tho show correctly the audio on autoplay by pausing or continuing it (for those audios that are periodically discontinuous).
 
 #The func _ready() is only called one time when the game gets started (or this scene is acceses for the 1st time)
 #The func _physics_process() is called aproximately 60 times per second (or for every frame)

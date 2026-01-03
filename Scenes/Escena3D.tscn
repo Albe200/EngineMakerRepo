@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://dsj4c42qmgowu"]
+[gd_scene load_steps=22 format=4 uid="uid://dsj4c42qmgowu"]
 
 [ext_resource type="PackedScene" uid="uid://c0g6sgh0wwrrx" path="res://Scenes/Player.tscn" id="2_5xha7"]
 [ext_resource type="Texture2D" uid="uid://cnbbny7qjh2xn" path="res://Assets/Textures/coin.png" id="3_2lfkc"]
 [ext_resource type="PackedScene" uid="uid://blf1xitfi23fv" path="res://Scenes/Coin.tscn" id="3_equcc"]
 [ext_resource type="Script" uid="uid://cbbuf650etfp" path="res://Scripts/Counter.gd" id="3_rniql"]
 [ext_resource type="Script" uid="uid://cgqg5eylfmk3m" path="res://Scripts/gameManager.gd" id="4_2lfkc"]
+[ext_resource type="AudioStream" uid="uid://u5xilvxvh3ks" path="res://Assets/Audio/Musica/POL-test-your-skills-short.wav" id="6_gpsgx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_spyxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -346,7 +347,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.005, 3, -1.536)
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.784, 7, 7.435)
 
 [node name="Coin4" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.056, 1, -0.748)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.056, 1, -1.4593323)
 
 [node name="BluePlatform3" type="MeshInstance3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.946, 8, 14.67)
@@ -380,3 +381,7 @@ shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="Coin5" parent="." instance=ExtResource("3_equcc")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.425, 11, 6.411)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_gpsgx")
+autoplay = true

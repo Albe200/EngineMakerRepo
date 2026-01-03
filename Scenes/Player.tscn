@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://c0g6sgh0wwrrx"]
+[gd_scene load_steps=23 format=4 uid="uid://c0g6sgh0wwrrx"]
 
 [ext_resource type="Script" uid="uid://cw01lveev8rn1" path="res://Scripts/playerMovement.gd" id="1_rpqav"]
 [ext_resource type="Texture2D" uid="uid://bt5o0sr6peltq" path="res://Assets/Models/gobot/model/gobot_gobot_diffuse.png" id="2_dewec"]
 [ext_resource type="Texture2D" uid="uid://cgkj45d67dalm" path="res://Assets/Models/gobot/model/gobot_gobot_roughness.png" id="3_5ixxa"]
 [ext_resource type="Texture2D" uid="uid://d28w5bql3g21l" path="res://Assets/Models/gobot/model/gobot_gobot_normal.png" id="4_nn08x"]
+[ext_resource type="AudioStream" uid="uid://lnq3qyt6mylm" path="res://Assets/Audio/SFX/jump.ogg" id="5_5ixxa"]
+[ext_resource type="AudioStream" uid="uid://ncq6fpsrcmjh" path="res://Assets/Audio/SFX/walking.ogg" id="6_nn08x"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kyqiw"]
 radius = 0.51708984
@@ -2233,3 +2235,10 @@ skin = SubResource("Skin_bhhdu")
 libraries = {
 &"": SubResource("AnimationLibrary_0t4te")
 }
+
+[node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_5ixxa")
+
+[node name="WalkingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_nn08x")
+autoplay = true

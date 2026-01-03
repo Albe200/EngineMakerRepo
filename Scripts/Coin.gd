@@ -15,4 +15,5 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if body.name == "Player":    #Checks if the body collisiones is the player
 		GameManager.add_score()
+		AudioManager.coinAudio.play()
 		queue_free()
