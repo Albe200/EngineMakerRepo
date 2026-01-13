@@ -23,6 +23,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
+	#To hide the cursor when left click is pressed
+	if Input.is_action_just_pressed("mouse_left"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	#Check if y-position of player is below -10m so it has to respawn
 	if position.y < -4:
 		respawn_player()
@@ -59,7 +63,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
-	move_and_slide()
+	move_and_slide()    #This is so necessary for colliding with obstacles.
 
 func respawn_player():
 	position = respawnPosition    #resets the player's position (to its original one from the main scene)

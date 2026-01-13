@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dsj4c42qmgowu"]
+[gd_scene load_steps=24 format=4 uid="uid://dsj4c42qmgowu"]
 
 [ext_resource type="PackedScene" uid="uid://c0g6sgh0wwrrx" path="res://Scenes/Player.tscn" id="2_5xha7"]
 [ext_resource type="Texture2D" uid="uid://cnbbny7qjh2xn" path="res://Assets/Textures/coin.png" id="3_2lfkc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cgqg5eylfmk3m" path="res://Scripts/gameManager.gd" id="4_2lfkc"]
 [ext_resource type="AudioStream" uid="uid://u5xilvxvh3ks" path="res://Assets/Audio/Musica/POL-test-your-skills-short.wav" id="6_gpsgx"]
 [ext_resource type="PackedScene" uid="uid://doatfpkf04m74" path="res://Scenes/bridge.tscn" id="7_owpbv"]
+[ext_resource type="PackedScene" uid="uid://brvtdb2pt88d6" path="res://Scenes/Obstacle.tscn" id="8_iavkn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_spyxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -265,8 +266,8 @@ font_size = 50
 environment = SubResource("Environment_5xha7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.41620153, -0.78745306, 0.45463616, 2.7805946e-08, 0.49999994, 0.8660255, -0.90927243, -0.36044112, 0.20810077, 9.152191, 20, -2.428)
-light_color = Color(0.7411765, 0.7647059, 0.5882353, 1)
+transform = Transform3D(-0.589577, 0.69949913, -0.4038561, 8.953674e-08, 0.50000006, 0.8660254, 0.8077121, 0.51058877, -0.29478866, 0, 30, 14.423)
+light_color = Color(0.96862745, 1, 0.8117647, 1)
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_5xha7")]
@@ -388,7 +389,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="RedPlatform5" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -7.846, 16, 7.608)
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -7.846, 12, 7.608)
 mesh = SubResource("ArrayMesh_5xha7")
 skeleton = NodePath("")
 
@@ -398,16 +399,16 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="Bridge" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-3.759398e-08, 0.10887291, 10.250068, 1.5707345e-08, 0.2795473, -3.9920068, -1, 2.9797925e-10, -4.4804472e-07, -0.06321001, 13.739989, 6.739487)
+transform = Transform3D(-4.371139e-08, 0, 7, 0, 0.3, 0, -1, 0, -3.059797e-07, -0.063, 12, 7.692605)
 
 [node name="Coin6" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.883, 9, 7.791)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.187962, 16.73656, 23.601585)
 
 [node name="Coin7" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 14.258, 6.95)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 13, 7.7536397)
 
 [node name="BluePlatform5" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, -7.846, 8, 7.608)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, -7.846, 8, 22.61319)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -416,5 +417,27 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BluePlatform5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
+[node name="RedPlatform6" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -7.846, 16, 22.613)
+mesh = SubResource("ArrayMesh_5xha7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedPlatform6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedPlatform6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_equcc")
+
+[node name="Bridge3" parent="." instance=ExtResource("7_owpbv")]
+transform = Transform3D(1, 0, 0, 0, 0.28271353, 4.1592727, 0, -0.1260141, 9.331357, -8.436443, 13.839078, 15.037938)
+
+[node name="Coin8" parent="." instance=ExtResource("3_equcc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.360104, 9, 22.91597)
+
 [node name="Bridge2" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-4.371139e-08, -0.108975366, -10.248604, 0, 0.27950737, -3.9957633, 1, -4.7634643e-09, -4.4798068e-07, -0.06321001, 9.814937, 8.466698)
+transform = Transform3D(1, 0, 0, 0, 0.2767938, -3.856485, 0, 0.115694545, 9.226459, -7.1854973, 9.988124, 15.178733)
+
+[node name="Obstacle" parent="." instance=ExtResource("8_iavkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.682, 4.61, 7.571)
+
+[node name="Obstacle2" parent="." instance=ExtResource("8_iavkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.682, 12.61, 7.571)

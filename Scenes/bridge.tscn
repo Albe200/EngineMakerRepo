@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://doatfpkf04m74"]
+[gd_scene load_steps=6 format=3 uid="uid://doatfpkf04m74"]
 
 [ext_resource type="Material" uid="uid://b8oifxeiypmb6" path="res://materials/first_material.tres" id="1_3mp33"]
+[ext_resource type="Script" uid="uid://bg6lnd3n2bh1f" path="res://Scripts/bridgeRotation.gd" id="2_h1rw7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_iaiv0"]
 
@@ -11,10 +12,11 @@ albedo_color = Color(0, 1, 0.48235294, 1)
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
 [node name="Bridge" type="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 0.3, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.3, 0, 0, 0, 5, 0, 0, 0)
 material_override = ExtResource("1_3mp33")
 mesh = SubResource("BoxMesh_iaiv0")
 surface_material_override/0 = SubResource("StandardMaterial3D_3mp33")
+script = ExtResource("2_h1rw7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
