@@ -3,6 +3,8 @@ extends CharacterBody3D
 
 const SPEED = 6.5    #By default: 5.0
 const JUMP_VELOCITY = 8   #By default: 4.5
+const friction = 15.0
+const acceleration = 25.0
 var jumped_once = false
 var respawnPosition = Vector3(0, 2, 0)
 @export var mouse_sensitivity_horizontal = 0.2
@@ -12,7 +14,7 @@ var respawnPosition = Vector3(0, 2, 0)
 @onready var walkingAudio = $WalkingAudio
 
 func _ready() -> void:
-	add_to_group("player")
+	add_to_group("player")    #For the cloud collide
 	
 	#To remove the cursor when game has started
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -58,11 +60,13 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")    #For move
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		# Acelerar hacia la dirección deseada
+		velocity.x = move_toward(velocity.x, direction.x * SPEED, acceleration * delta)
+		velocity.z = move_toward(velocity.z, direction.z * SPEED, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		# Frenar con inercia
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
+		velocity.z = move_toward(velocity.z, 0, friction * delta)
 
 	move_and_slide()    #This is so necessary for colliding with obstacles.
 

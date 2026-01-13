@@ -31,13 +31,13 @@ transform = Transform3D(0.7, 0, 0, 0, 0.35, 0, 0, 0, 0.7, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_2sxyv")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(0.35, 0, 0, 0, -1.3113416e-07, -0.35, 0, 3, -1.5298985e-08, 0, 0, 0)
+transform = Transform3D(0.35, 0, 0, 0, -1.5298986e-07, -0.35, 0, 3.5, -1.5298985e-08, 0, 0, 0)
 material_override = ExtResource("1_uh273")
 mesh = SubResource("CylinderMesh_5vp6k")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(0.35, 0, 0, 0, -1.3113416e-07, -0.35, 0, 3, -1.5298985e-08, 0, 0, 0)
+transform = Transform3D(0.35, 0, 0, 0, -1.5298986e-07, -0.35, 0, 3.5, -1.5298985e-08, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_1v7b5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
