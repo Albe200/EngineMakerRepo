@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dsj4c42qmgowu"]
+[gd_scene load_steps=25 format=4 uid="uid://dsj4c42qmgowu"]
 
 [ext_resource type="PackedScene" uid="uid://c0g6sgh0wwrrx" path="res://Scenes/Player.tscn" id="2_5xha7"]
 [ext_resource type="Texture2D" uid="uid://cnbbny7qjh2xn" path="res://Assets/Textures/coin.png" id="3_2lfkc"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://u5xilvxvh3ks" path="res://Assets/Audio/Musica/POL-test-your-skills-short.wav" id="6_gpsgx"]
 [ext_resource type="PackedScene" uid="uid://doatfpkf04m74" path="res://Scenes/bridge.tscn" id="7_owpbv"]
 [ext_resource type="PackedScene" uid="uid://brvtdb2pt88d6" path="res://Scenes/Obstacle.tscn" id="8_iavkn"]
+[ext_resource type="PackedScene" uid="uid://4fq2cygbsfbi" path="res://Scenes/Cloud.tscn" id="9_xvmi8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_spyxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -441,3 +442,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.682, 4.61, 7.571)
 
 [node name="Obstacle2" parent="." instance=ExtResource("8_iavkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.682, 12.61, 7.571)
+
+[node name="Cloud" parent="." instance=ExtResource("9_xvmi8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.846, 14, 7.608)

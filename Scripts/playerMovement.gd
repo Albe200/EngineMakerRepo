@@ -12,6 +12,7 @@ var respawnPosition = Vector3(0, 2, 0)
 @onready var walkingAudio = $WalkingAudio
 
 func _ready() -> void:
+	add_to_group("player")
 	
 	#To remove the cursor when game has started
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -94,6 +95,9 @@ func animate_player():
 	else:
 		walkingAudio.stream_paused = true    #This needs to be rewrited to avoid hear the walkign audio while player have jumped.
 	#The property stream_paused is used tho show correctly the audio on autoplay by pausing or continuing it (for those audios that are periodically discontinuous).
+
+func update_respawn(newRespawn: Vector3):
+	respawnPosition = newRespawn
 
 #The func _ready() is only called one time when the game gets started (or this scene is acceses for the 1st time)
 #The func _physics_process() is called aproximately 60 times per second (or for every frame)
