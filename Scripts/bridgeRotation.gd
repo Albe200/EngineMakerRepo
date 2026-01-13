@@ -9,7 +9,7 @@ func _ready() -> void:
 	if rotation.x != 0:    #Aply rotation for originally rotated bridges on axis X on Escena3D
 		if deg_to_rad(rotation.y) == deg_to_rad(0):
 			es_rotable_en_x = true
-		elif rotation.y >= 1.57 and rotation.y <= 1.58:
+		elif rotation.y >= 1.57 and rotation.y <= 1.5708:    #The rotation length is in radians, not in degrees.
 			es_rotable_en_z = true
 
 
