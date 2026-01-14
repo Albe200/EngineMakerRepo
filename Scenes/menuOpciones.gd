@@ -11,7 +11,7 @@ const elapsed_time_max := 10.0
 func _ready():
 	bar.max_value = 100
 	bar.value = 0
-	play.pressed.connect(_on_play_pressed)   # conexión correcta
+	play.pressed.connect(_on_play_pressed)
 
 func _on_play_pressed():
 	if not filling:
@@ -36,3 +36,4 @@ func _process(_delta):
 	else:
 		play.text = "PLAY GAME"
 		bar.value = 0
+		elapsed_time = 0
