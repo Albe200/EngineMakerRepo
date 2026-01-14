@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EngineMaker"
-run/main_scene="uid://dsj4c42qmgowu"
+run/main_scene="uid://ci238mw3qse4e"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

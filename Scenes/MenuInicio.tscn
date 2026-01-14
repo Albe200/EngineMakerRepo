@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bus3s4wsvjjny"]
+[gd_scene load_steps=12 format=3 uid="uid://ci238mw3qse4e"]
 
+[ext_resource type="Script" uid="uid://b3074e0ybo2a8" path="res://Scenes/menuOpciones.gd" id="1_l5kx3"]
 [ext_resource type="Texture2D" uid="uid://bdrurjyk1irwk" path="res://icon.svg" id="1_xjtda"]
+[ext_resource type="PackedScene" uid="uid://dsj4c42qmgowu" path="res://Scenes/Escena3D.tscn" id="2_haodl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x086x"]
 bg_color = Color(1, 1, 0.63529414, 1)
@@ -35,13 +37,24 @@ bg_color = Color(0.21176471, 0.20392157, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8uy8"]
 bg_color = Color(1, 0.16862746, 0.16470589, 1)
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmkba"]
+bg_color = Color(0, 0.54509807, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frnrh"]
+bg_color = Color(0, 0.39215687, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34fxn"]
+bg_color = Color(0, 0.8235294, 0, 1)
+
+[node name="MenuInicio" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l5kx3")
+game_scene = ExtResource("2_haodl")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -94,27 +107,6 @@ theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 100
 text = "MENU INICIO"
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -281.5
-offset_top = -137.0
-offset_right = 281.5
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 100
-text = "PLAY GAME"
-
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 1
 anchors_preset = 6
@@ -132,7 +124,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 30
 theme_override_styles/background = SubResource("StyleBoxFlat_4rhnl")
-value = 37.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -171,3 +162,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_r8uy8")
 text = "QUIT"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 459.0
+offset_right = 760.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_rmkba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_frnrh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34fxn")
+text = "PLAY GAME"
