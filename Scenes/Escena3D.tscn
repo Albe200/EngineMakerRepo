@@ -380,7 +380,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="RedPlatform5" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -7.846, 12, 7.608)
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -8.717704, 12, 7.608)
 mesh = SubResource("ArrayMesh_5xha7")
 skeleton = NodePath("")
 
@@ -390,16 +390,16 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="Bridge" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-4.371139e-08, 0.115771815, 5.5352287, 0, 0.27676144, -2.3154364, -1, -5.0605466e-09, -2.4195253e-07, -0.063, 12, 7.692605)
+transform = Transform3D(-4.371139e-08, 0.115771815, 5.5352287, 0, 0.27676144, -2.3154364, -1, -5.0605466e-09, -2.4195253e-07, -0.6342972, 12, 7.692605)
 
 [node name="Coin6" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.276221, 14.893476, 26.716753)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.923985, 14.893476, 26.716753)
 
 [node name="Coin7" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 13, 7.7536397)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.5725908, 13, 7.7536397)
 
 [node name="BluePlatform5" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, -7.846, 8, 22.61319)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, -8.782709, 8, 22.61319)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -409,7 +409,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="RedPlatform6" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -7.846, 16, 22.613)
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, -8.67582, 16, 22.613)
 mesh = SubResource("ArrayMesh_5xha7")
 skeleton = NodePath("")
 
@@ -419,25 +419,25 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="Bridge3" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -7.8690434, 9.795702, 26.726566)
+transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -8.764843, 9.795702, 26.726566)
 
 [node name="Coin8" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.264, 11, 15.101)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.619564, 11, 15.101)
 
 [node name="Bridge2" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(1, 0, 0, 0, 0.27679375, -2.3138907, 0, 0.115694545, 5.535875, -7.1854973, 9.988124, 15.178733)
+transform = Transform3D(1, 0, 0, 0, 0.27679375, -2.3138907, 0, 0.115694545, 5.535875, -8.644407, 9.988124, 15.178733)
 
 [node name="Obstacle" parent="." instance=ExtResource("8_iavkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.682, 4.61, 7.571)
 
 [node name="Obstacle2" parent="." instance=ExtResource("8_iavkn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.846, 12.61, 7.608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.546421, 12.61, 7.608)
 
 [node name="Cloud" parent="." instance=ExtResource("9_xvmi8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.682, 14, 7.571)
 
 [node name="BluePlatform6" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, -7.846, 12, 30.5)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, -8.594505, 12, 30.5)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -447,7 +447,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="Bridge4" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -7.8690434, 14.425581, 26.726566)
+transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -8.67114, 14.425581, 26.726566)
 
 [node name="BluePlatform7" type="MeshInstance3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 0, 0, 0)
@@ -470,7 +470,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="Bridge5" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-4.371139e-08, 0.115771815, 5.5352287, 0, 0.27676144, -2.3154364, -1, -5.0605466e-09, -2.4195253e-07, -0.063, 15.865738, 22.64808)
+transform = Transform3D(-4.371139e-08, 0.115771815, 5.5352287, 0, 0.27676144, -2.3154364, -1, -5.0605466e-09, -2.4195253e-07, -0.26567104, 15.865738, 22.64808)
 
 [node name="Cloud2" parent="." instance=ExtResource("9_xvmi8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.682, 17.339994, 22.384878)
@@ -479,13 +479,46 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.682, 17.339994, 22.384878)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.946, 11.051452, 7.274)
 
 [node name="Obstacle4" parent="." instance=ExtResource("8_iavkn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.846, 13.043169, 30.645765)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.506767, 13.043169, 30.645765)
 
 [node name="Coin9" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.112, 17, 22.552)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 23.962904, 16.67807, 22.82196)
 
 [node name="Obstacle5" parent="." instance=ExtResource("8_iavkn")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 11.091289, 8.149781, 14.628021)
 
 [node name="Obstacle6" parent="." instance=ExtResource("8_iavkn")]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -7.558441, 12.503131, 18.780075)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -8.76515, 12.503131, 18.780075)
+
+[node name="RedPlatform8" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 0.305, 0, 0, 0, 3, 24.331114, 16, 22.61722)
+mesh = SubResource("ArrayMesh_5xha7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedPlatform8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedPlatform8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_equcc")
+
+[node name="BluePlatform8" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.7320566e-15, 3.059797e-08, 3, 3, -3.059797e-08, 0, 1.3113416e-07, 0.7, -1.3113416e-07, 16.112, 16, 18.936)
+mesh = SubResource("ArrayMesh_equcc")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BluePlatform8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BluePlatform8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_2lfkc")
+
+[node name="BluePlatform9" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.7320566e-15, 3.059797e-08, 3, 3, -3.059797e-08, 0, 1.3113416e-07, 0.7, -1.3113416e-07, 16.112, 16, 27.073)
+mesh = SubResource("ArrayMesh_equcc")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BluePlatform9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BluePlatform9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_2lfkc")
+
+[node name="Bridge6" parent="." instance=ExtResource("7_owpbv")]
+transform = Transform3D(1, 0, 0, 0, 0.27679375, -2.3138907, 0, 0.115694545, 5.535875, 16.210815, 16, 23.125)

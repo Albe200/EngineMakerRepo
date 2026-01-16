@@ -5,7 +5,7 @@ const SPEED = 6.5    #By default: 5.0
 const JUMP_VELOCITY = 8   #By default: 4.5
 const friction = 15.0
 const acceleration = 25.0
-var jumped_once = false
+var jumped_twice = false
 var respawnPosition = Vector3(0, 2, 0)
 @export var mouse_sensitivity_horizontal = 0.2
 @export var mouse_sensitivity_vertical = 0.2
@@ -43,15 +43,15 @@ func _physics_process(delta: float) -> void:
 		jumpAudio.play()
 	
 	# Handle double jump.
-	if Input.is_action_just_pressed("jump") and not is_on_floor() and not jumped_once:
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("jump") and not is_on_floor() and not jumped_twice:
+		velocity.y = JUMP_VELOCITY * 0.75
 		animation.play("Flip", 0.3)
 		jumpAudio.play()
-		jumped_once = true
+		jumped_twice = true
 	
 	# Resets double jump.
-	if is_on_floor() and jumped_once:
-		jumped_once = false
+	if is_on_floor() and jumped_twice:
+		jumped_twice = false
 
 	# Get the input direction and handle the movement/deceleration
 	# As good practice, you should replace UI actions with custom gameplay actions
