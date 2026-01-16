@@ -12,6 +12,7 @@ var respawnPosition = Vector3(0, 2, 0)
 @onready var animation =  $gobot/AnimationPlayer    #Getting the reference of the animation node
 @onready var jumpAudio = $JumpAudio
 @onready var walkingAudio = $WalkingAudio
+@onready var pause_menu := $CanvasLayer/MenuPausa
 
 func _ready() -> void:
 	add_to_group("player")    #For the cloud collide
@@ -25,10 +26,7 @@ func _physics_process(delta: float) -> void:
 	#To make visible the cursor when "Escape" is pressed
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-	#To hide the cursor when left click is pressed
-	if Input.is_action_just_pressed("mouse_left"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		toggle_pause()
 	
 	#Check if y-position of player is below -10m so it has to respawn
 	if position.y < -4:
@@ -103,5 +101,14 @@ func animate_player():
 func update_respawn(newRespawn: Vector3):
 	respawnPosition = newRespawn
 
+func toggle_pause():
+	if get_tree().paused:
+		# estaba pausado → continuar
+		get_tree().paused = false
+		pause_menu.hide()
+	else:
+		# pausar
+		get_tree().paused = true
+		pause_menu.show()
 #The func _ready() is only called one time when the game gets started (or this scene is acceses for the 1st time)
 #The func _physics_process() is called aproximately 60 times per second (or for every frame)

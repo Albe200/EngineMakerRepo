@@ -295,7 +295,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="BluePlatform2" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.946, 6, 7.274)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 7.261, 6, 14.67)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -305,7 +305,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_2lfkc")
 
 [node name="Coin" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 16.634127, 9, 14.615)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 7.285, 7.726, 14.747)
 
 [node name="Counter" type="Control" parent="."]
 layout_mode = 3
@@ -337,7 +337,7 @@ script = ExtResource("4_2lfkc")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.005, 3, -1.536)
 
 [node name="Coin3" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.784, 7, 7.435)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 14.959556, 11.747751, 7.2102685)
 
 [node name="Coin4" parent="." instance=ExtResource("3_equcc")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.056, 1, -1.4593323)
@@ -370,7 +370,7 @@ stream = ExtResource("6_gpsgx")
 autoplay = true
 
 [node name="BluePlatform4" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 7.261, 10, 14.67)
+transform = Transform3D(3, 0, 0, 0, 0.7, 0, 0, 0, 3, 14.946, 10, 7.274)
 mesh = SubResource("ArrayMesh_equcc")
 skeleton = NodePath("")
 
@@ -393,7 +393,7 @@ shape = SubResource("ConcavePolygonShape3D_equcc")
 transform = Transform3D(-4.371139e-08, 0.115771815, 5.5352287, 0, 0.27676144, -2.3154364, -1, -5.0605466e-09, -2.4195253e-07, -0.063, 12, 7.692605)
 
 [node name="Coin6" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.187962, 16.73656, 23.601585)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.276221, 14.893476, 26.716753)
 
 [node name="Coin7" parent="." instance=ExtResource("3_equcc")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 13, 7.7536397)
@@ -422,10 +422,10 @@ shape = SubResource("ConcavePolygonShape3D_equcc")
 transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -7.8690434, 9.795702, 26.726566)
 
 [node name="Coin8" parent="." instance=ExtResource("3_equcc")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -9.360104, 9, 22.91597)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.264, 11, 15.101)
 
 [node name="Bridge2" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(1, 0, 0, 0, 0.27679375, -2.3138905, 0, 0.11569453, 5.535875, -7.1854973, 9.988124, 15.178733)
+transform = Transform3D(1, 0, 0, 0, 0.27679375, -2.3138907, 0, 0.115694545, 5.535875, -7.1854973, 9.988124, 15.178733)
 
 [node name="Obstacle" parent="." instance=ExtResource("8_iavkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.682, 4.61, 7.571)
@@ -476,7 +476,16 @@ transform = Transform3D(-4.371139e-08, 0.115771815, 5.5352287, 0, 0.27676144, -2
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.682, 17.339994, 22.384878)
 
 [node name="Obstacle3" parent="." instance=ExtResource("8_iavkn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.261, 11.055302, 14.67)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.946, 11.051452, 7.274)
 
 [node name="Obstacle4" parent="." instance=ExtResource("8_iavkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.846, 13.043169, 30.645765)
+
+[node name="Coin9" parent="." instance=ExtResource("3_equcc")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.112, 17, 22.552)
+
+[node name="Obstacle5" parent="." instance=ExtResource("8_iavkn")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 11.091289, 8.149781, 14.628021)
+
+[node name="Obstacle6" parent="." instance=ExtResource("8_iavkn")]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -7.558441, 12.503131, 18.780075)
