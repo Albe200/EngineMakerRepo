@@ -261,7 +261,7 @@ data = PackedVector3Array(0.77489996, 1, 0.36089998, 0.7719, 1, -0.4129, 0.77489
 [sub_resource type="LabelSettings" id="LabelSettings_equcc"]
 font_size = 50
 
-[node name="Level1" type="Node3D"]
+[node name="Level1" type="Node3D" groups=["player"]]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5xha7")

@@ -2033,7 +2033,7 @@ _data = {
 &"WallSlide": SubResource("Animation_pl1cd")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_rpqav")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
