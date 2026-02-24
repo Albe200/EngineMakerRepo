@@ -33,9 +33,9 @@ func _process(delta: float) -> void:
 	if es_rotable_en_y:
 		rotate_y(deg_to_rad(rotationalSpeed))
 	elif es_rotable_en_x:
-		rotate_x(deg_to_rad(rotationalSpeed))
+		rotate_x(-deg_to_rad(rotationalSpeed))    #Negative sign change the sense of the vertical rotation. Removing it makes the impulse of obstacles be oposite the rotational sense. 
 	elif es_rotable_en_z:
-		rotate_z(deg_to_rad(rotationalSpeed))
+		rotate_z(-deg_to_rad(rotationalSpeed))    #Negative sign change the sense of the vertical rotation. Removing it makes the impulse of obstacles be oposite the rotational sense.
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
