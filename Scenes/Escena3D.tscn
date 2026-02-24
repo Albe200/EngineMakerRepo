@@ -419,7 +419,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_equcc")
 
 [node name="Bridge3" parent="." instance=ExtResource("7_owpbv")]
-transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -8.764843, 9.795702, 26.726566)
+transform = Transform3D(-4.371139e-08, 0, 3.707351, 0, 0.3095262, 0, -1, 0, -1.6205347e-07, -8.765, 10.25, 26.727)
 
 [node name="Coin8" parent="." instance=ExtResource("3_equcc")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.619564, 11, 15.101)

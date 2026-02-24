@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Doble salto
 	if Input.is_action_just_pressed("jump") and not is_on_floor() and not jumped_twice:
-		velocity.y = JUMP_VELOCITY * 0.75
+		velocity.y = JUMP_VELOCITY
 		animation.play("Flip", 0.3)
 		jumpAudio.play()
 		jumped_twice = true
