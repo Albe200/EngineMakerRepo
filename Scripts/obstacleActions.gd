@@ -15,7 +15,6 @@ const rotationalIncreasePercent = 0.66
 func _ready() -> void:
 	monitoring = true
 	monitorable = true
-	body_entered.connect(_on_body_entered)
 	
 	for child in get_children():
 		if child is CollisionShape3D:
